@@ -1,0 +1,39 @@
+**************************To install pip into system****************************
+
+
+1) first download pip by entering below command in cmd:
+
+	curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+
+2) after that enter below command:
+
+	python get-pip.py
+
+3) to check if pip is installed enter below command:
+
+	pip help
+
+
+**************************To create virtual environment*************************
+
+1) goto the project folder (preferably)
+	type cmd into address bar
+	Cmd will open
+
+2) below command will install virtualenv
+
+	 pip install virtualenv
+
+3) below command will create a venv folder in project directory
+
+	virtualenv venv 
+
+4) Now, whenever you want to work on a project, you only have to activate the corresponding environment:
+
+	venv\scripts\activate
+
+5) Now you can just enter the following command to get Flask activated in your virtualenv:
+
+	pip install Flask
+
+
