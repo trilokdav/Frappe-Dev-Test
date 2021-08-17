@@ -35,5 +35,9 @@
 5) Now you can just enter the following command to get Flask activated in your virtualenv:
 
 	pip install Flask
+	
+	or 
+	
+	pip install -r requirements.txt
 
 
