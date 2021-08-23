@@ -4,7 +4,6 @@ admin = Blueprint('admin', __name__, template_folder='../assets/templates/admin'
 
 from app import mysql
 
-
 @admin.route('/')
 def test():
     return render_template('add_books.html')
