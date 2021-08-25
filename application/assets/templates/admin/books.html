@@ -1,0 +1,73 @@
+{% extends 'dashboard.html' %}
+{% block content %}
+
+<div class="col-md-12 col-xl-12 col-lg-12">
+    <div class="card" style="background-image: linear-gradient(to right,#754edd ,#e2114f);" >
+        <div class="row">
+            <div class="col-6 col-xs-12">
+                <h3 class="p-0 m-1 ml-4 text-white">Books</h3>
+            </div>
+            <div class="col-6 col-xs-12">
+                <button class="btn btn-primary float-right mt-1 p-2 mr-1"><i class="fa fa-download" aria-hidden="true"></i>&nbsp Import Books</button>
+            </div>
+        </div>
+    </div>
+
+    <br/><br/>
+
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-bordered table-striped table-hover">
+ 
+                <thead class="table-dark" style="background-image: linear-gradient(to right,#754edd ,#e2114f);">
+               
+                  <tr>
+               
+                    <th>Book ID</th>
+                    <th>Book Title</th>
+                    <th>Author</th>
+                    <th>Rating</th>
+                    <th>Language</th>
+                    <th>Publication Date</th>
+                    <th>Publisher</th>
+                    <th>Stock</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+
+               
+                  </tr>
+               
+                </thead>
+               
+                <tbody class="text-center">
+                
+                {% for x in testquery%}
+                  <tr>
+               
+                    <th scope="row">{{ x['bookID']}}</th>
+                    <td>{{ x['title']}}</td>
+                    <td>{{ x['authors']}}</td>
+                    <td>{{ x['average_rating']}}</td>
+                    <td>{{ x['language_code']}}</td>
+                    <td>{{ x['publication_date']}}</td>
+                    <td>{{ x['publisher']}}</td>
+                    <td>{{ x['isbn']}}</td>
+                    <td><button class="btn btn-success rounded-lg"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button></td>
+                    <td><button class="btn btn-danger rounded-lg"><i class="fa fa-trash" aria-hidden="true"></i></button></td>
+                  </tr>
+                {% endfor %}
+               
+                </tbody>
+               
+            </table>
+        </div>
+    </div>
+    
+    <!-- <p>{{testquery}}</p> -->
+
+
+</div>
+
+
+
+{% endblock %}
