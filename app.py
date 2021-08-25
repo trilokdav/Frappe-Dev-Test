@@ -1,5 +1,4 @@
 from flask import Flask
-from application import mysqlconnection
 from application.mysqlconnection import MySQLConnector
 
 
