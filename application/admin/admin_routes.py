@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, flash, session, Flask
+from flask import Blueprint, render_template, flash, session, request
 admin = Blueprint('admin', __name__, template_folder='../assets/templates/admin', static_folder='../assets/static', url_prefix='/admin')
 from app import mysql
 
@@ -13,3 +13,8 @@ def books():
     query=('''select * from frappe.books''')
     testquery= mysql.query_db(query)
     return render_template('books.html',testquery=testquery)
+
+
+@admin.route('/import-books')
+def import_books():
+    pass
